@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Section implements Element, Visitee {
+public class Section implements Element {
     private String title;
     List<Element> elementList;
 
@@ -36,14 +36,9 @@ public class Section implements Element, Visitee {
         return null;
     }
 
-    @Override
-    public void print() {
-        System.out.println(title);
-        elementList.forEach(Element::print);
-    }
 
     @Override
     public void accept(Visitor visitor) {
-
+        visitor.visitSection(this);
     }
 }

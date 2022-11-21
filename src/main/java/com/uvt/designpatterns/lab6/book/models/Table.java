@@ -11,11 +11,6 @@ public class Table implements Element {
     private String tableTitle;
 
     @Override
-    public void print(){
-        System.out.println("Table with title: " + this.tableTitle);
-    }
-
-    @Override
     public void add(Element element) {
 
     }
@@ -28,5 +23,10 @@ public class Table implements Element {
     @Override
     public Element get(int index) {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTable(this);
     }
 }

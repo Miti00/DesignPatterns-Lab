@@ -1,7 +1,5 @@
 package com.uvt.designpatterns.lab6.book.models;
 
-import com.uvt.designpatterns.lab6.book.models.Author;
-import com.uvt.designpatterns.lab6.book.models.Element;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Book {
+public class Book implements Visitee{
     private String title;
     private List<Author> authors;
     private List<Element> contentList;
@@ -36,13 +34,8 @@ public class Book {
         }
     }
 
-    public void print(){
-        System.out.println("Book: " + this.title);
-        System.out.println();
-        System.out.println("Authors:");
-        authors.forEach(Author::print);
-        System.out.println();
-        contentList.forEach(Element::print);
-        System.out.println();
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitBook(this);
     }
 }
