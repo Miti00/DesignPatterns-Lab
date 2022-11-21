@@ -10,24 +10,15 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
-public class Paragraph implements Element, Visitee {
+public class Paragraph implements Element {
     private String paragraphName;
     private String text;
-    private AlignStrategy alignStrategy;
 
     public Paragraph(String paragraphName, String text){
         this.paragraphName = paragraphName;
         this.text = text;
     }
 
-    @Override
-    public void print(){
-        if(alignStrategy == null){
-            System.out.println("Paragraph: " + this.paragraphName + "\n" + this.text);
-        }else{
-            alignStrategy.render(this);
-        }
-    }
 
 
 
@@ -47,6 +38,6 @@ public class Paragraph implements Element, Visitee {
 
     @Override
     public void accept(Visitor visitor) {
-
+        visitor.visitParagraph(this);
     }
 }

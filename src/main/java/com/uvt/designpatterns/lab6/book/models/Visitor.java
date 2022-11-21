@@ -1,7 +1,7 @@
 package com.uvt.designpatterns.lab6.book.models;
 
 public interface Visitor<T>{
-    T visitBook(Book book);
+    void visitBook(Book book);
     T visitSection(Section section);
     T visitTableOfContents(TableOfContents tableOfContents);
     T visitParagraph(Paragraph paragraph);

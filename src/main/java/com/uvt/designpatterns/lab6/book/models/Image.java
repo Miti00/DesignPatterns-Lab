@@ -18,16 +18,6 @@ public class Image implements Element, Picture {
 
     public Image(String imageName){
         this.imageName = imageName;
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void print(){
-        System.out.println("Image with name: " + imageName);
     }
 
     @Override
@@ -58,5 +48,10 @@ public class Image implements Element, Picture {
     @Override
     public PictureContent content() {
         return null;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
     }
 }
