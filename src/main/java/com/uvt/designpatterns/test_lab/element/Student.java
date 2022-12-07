@@ -16,8 +16,7 @@ public class Student implements Element, Visitee {
 
     @Override
     public Element add(Element element) {
-
-        return element;
+        return this;
     }
 
 

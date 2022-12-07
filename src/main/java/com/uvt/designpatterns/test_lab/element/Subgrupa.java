@@ -10,10 +10,10 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Subgrupa implements Element, Visitee {
+public class Subgrupa implements Element{
 
     private static final int MAX_STUDENTS = 15;
-    private List<Student> studentList = new ArrayList<>();
+    private List<Element> studentList = new ArrayList<>();
     private String nume;
 
     public Subgrupa(String nume) {
@@ -28,8 +28,7 @@ public class Subgrupa implements Element, Visitee {
                 studentList.add(student);
                 return this;
             } else {
-                System.out.println("Max limit reached");
-                return null;
+                throw new IllegalStateException("Max limit reached for subgrupa");
             }
         } else {
             throw new IllegalStateException("element added in semigroup not student");

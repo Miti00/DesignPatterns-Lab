@@ -20,5 +20,12 @@ public class Main {
         Visitor printVisitor = new PrintVisitor();
         info3.accept(printVisitor);
 
+
+        for(int i = 0, j = 0; i<10; i++){
+            System.out.println("t");
+        }
+
+
+
     }
 }
