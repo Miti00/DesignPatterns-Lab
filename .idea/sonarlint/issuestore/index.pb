@@ -55,7 +55,3 @@ r
 Bsrc/main/java/com/uvt/designpatterns/lab6/book/models/Visitor.java,d\3\d36ef18208c36ea794d6be584f15d475a7b47ad5
 c
 3src/main/java/com/uvt/designpatterns/lab6/Main.java,b\d\bd840cf73f14e81f6eb1e609687be4818bf3773a
-r
-Bsrc/main/java/com/uvt/designpatterns/test_lab/element/Visitee.java,9\5\95deb17abf631222822722138564deb1f0a263de
-r
-Bsrc/main/java/com/uvt/designpatterns/test_lab/visitor/Visitor.java,d\a\da4f8872611bbe13d739aba63f725035c29407ec

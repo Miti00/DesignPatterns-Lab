@@ -9,7 +9,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Grupa implements Element{
+public class Grupa implements Element, Visitee {
 
     private static final int MAX_LIMIT = 2;
     private String nume;
@@ -27,7 +27,7 @@ public class Grupa implements Element{
                 this.subgrupe.add(subgrupa);
                 return this;
             }else{
-                throw new IllegalStateException("Max limit reached in this group for semigroups");
+                return null;
             }
         } else {
             throw new IllegalStateException("element added in group not semigroup");

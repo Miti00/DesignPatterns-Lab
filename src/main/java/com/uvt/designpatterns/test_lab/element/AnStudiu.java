@@ -9,7 +9,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class AnStudiu implements Element {
+public class AnStudiu implements Element, Visitee {
 
     private String nume;
     private List<Element> elementList = new ArrayList<>();
@@ -21,8 +21,8 @@ public class AnStudiu implements Element {
 
     @Override
     public AnStudiu add(Element element) {
-            this.elementList.add(element);
-            return this;
+        this.elementList.add(element);
+        return this;
     }
 
 
