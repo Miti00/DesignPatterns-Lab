@@ -15,7 +15,6 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-
         ApplicationContext applicationContext = SpringApplication.run(MainApp.class, args);
 
         TransientComponent transientBean = applicationContext.getBean(TransientComponent.class);
